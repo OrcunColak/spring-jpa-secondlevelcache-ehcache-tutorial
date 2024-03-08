@@ -54,10 +54,12 @@
             <scope>runtime</scope>
         </dependency>
 
+        <!-- Integration for javax.cache (JSP107) into Hibernate standard API to connect second level cache providers  -->
         <dependency>
             <groupId>org.hibernate.orm</groupId>
             <artifactId>hibernate-jcache</artifactId>
         </dependency>
+        <!-- Echache - cache provider that supports JSP107 API specification -->
         <dependency>
             <groupId>org.ehcache</groupId>
             <artifactId>ehcache</artifactId>
