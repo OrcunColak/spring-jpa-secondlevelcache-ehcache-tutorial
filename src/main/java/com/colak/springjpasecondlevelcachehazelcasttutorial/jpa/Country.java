@@ -16,7 +16,7 @@ import java.util.Objects;
 @Table(name = "countries")
 @Entity
 @Cacheable
-// This will create an IMap having name "country"
+// This will create a cache having name "country"
 @Cache(usage = CacheConcurrencyStrategy.READ_WRITE, region = "country")
 
 @Getter
