@@ -15,6 +15,8 @@
     <description>Demo project for Spring Boot</description>
     <properties>
         <java.version>21</java.version>
+        <hazelcast-kubernetes.version>2.2.3</hazelcast-kubernetes.version>
+        <hazelcast.version>5.3.6</hazelcast.version>
     </properties>
 
     <build>
@@ -66,6 +68,15 @@
             <classifier>jakarta</classifier>
         </dependency>
 
+        <!-- This is just used to have a second JCache provider on the class path.
+        In application.properties we should specify which provider to use
+        See https://stackoverflow.com/questions/78262415/java-17-spring-boot-3-migration-ehcache-conflicting-with-hazelcast/78265964#78265964
+        -->
+        <dependency>
+            <groupId>com.hazelcast</groupId>
+            <artifactId>hazelcast</artifactId>
+            <version>${hazelcast.version}</version>
+        </dependency>
 
         <!-- Testing -->
         <dependency>
